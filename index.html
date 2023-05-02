@@ -3,8 +3,12 @@
   <head>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
+      
+    <div class="overlay"></div>
+      
     <div>
       <nav>
         <ul>
@@ -19,7 +23,14 @@
     <div class="wrapper">
       <header>
         <h1>Welcome to my Portfolio</h1>
-        <button>Hire Me</button>
+        <button id="resume-button">My Resume</button>
+          
+        <div id="resume-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="./images/resume.pdf"></iframe>
+          </div>
+        </div>
       </header>
       <section id="about">
         <h2>About Me</h2>
@@ -46,14 +57,15 @@
         <div class="project">
           <img src="./images/keepSizeLogo.png" alt="Project 2">
           <h3>keepSize</h3>
-          <p>A simple Windows application that utilizes a GUI and allows you to keep a record of the preferred dimensions and position of each window on the screen, and reset the values to your preferences if they are disrupted by third party applications.</p>
+          <p>A simple Windows application using Python that utilizes an interactive GUI that enables you to keep a record of the preferred dimensions and position of each window on the screen, and reset the window sizes/positions to your preferences if they are disrupted by third party applications or unintentional manual resizing.</p>
           <a href="https://github.com/Arad-L/keepSize">View Project</a>
         </div>
       </section>
     </div>
     <footer id="contact">
-      <p>My Links: <a href="https://www.linkedin.com/in/arad-levin-903300170"><b>LinkedIn</b></a> | <a href="https://github.com/Arad-L/"><b>GitHub</b></a> &emsp;&emsp; Contact Me: <a href="mailto:arad.levin@gmail.com"><b>arad.levin@gmail.com</b></a></p>
+      <p>My Links: <a href="https://www.linkedin.com/in/arad-levin"><b>LinkedIn</b></a> | <a href="https://github.com/Arad-L/"><b>GitHub</b></a> &emsp;&emsp; Contact Me: <a href="mailto:arad.levin@gmail.com"><b>arad.levin@gmail.com</b></a></p>
       <p>&copy; 2023 Arad Levin. All Rights Reserved | <a href="./policy.html"><b>Privacy Policy</b></a> | <a href="./terms.html"><b>Terms of Use</b></a></p>
     </footer>
+
   </body>
 </html>

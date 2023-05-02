@@ -17,6 +17,20 @@ body {
   background-color: #011C5C;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 h1, h2, h3 {
@@ -42,8 +56,9 @@ img {
 nav {
   display: flex;
   margin: auto;
-  background-color: teal;
+  background-color: #2A9B93;
   height: 60px;
+  z-index: 2;
 }
 
 nav ul {
@@ -58,6 +73,7 @@ nav ul {
 
 nav img {
   margin-right: 20px;
+  margin-left: 40px;
 }
 
 nav li {
@@ -230,8 +246,8 @@ header button:hover {
 
 footer {
   text-align: center;
-  color: lightgray;
-  background-color: teal;
+  color: #fff;
+  background-color: #2A9B93;
   padding: 20px 0;
   border-top: 1px;
   z-index: 999; /* ensure footer appears on top of other content */
@@ -259,4 +275,57 @@ footer a {
   overflow-y: auto;
   margin-bottom: 80px; /* add margin to bottom of wrapper to prevent content from being hidden behind the footer */
   margin-top: 20px;
+  z-index: 2;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 55%;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+}
+
+/* Iframe */
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: -8px;
+  left: 3px;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

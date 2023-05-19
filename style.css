@@ -140,10 +140,23 @@ header button:hover {
   margin-bottom: 30px;
 }
 
+#about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#about img {
+  max-width: 400px;
+  margin: 20px;
+}
+
 #about p {
   max-width: 600px;
-  margin: 0 auto;
   font-size: 1.2rem;
+  margin: 20px;
+  text-align: left;
 }
 
 /* Skills */
